@@ -24,3 +24,9 @@ proguard/
 
 # Log Files
 *.log
+
+# Android Stuido/IntelliJ generated files
+*.iml
+.idea
+
+.DS_Store

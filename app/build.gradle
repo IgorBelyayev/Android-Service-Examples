@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.1"
+
+    defaultConfig {
+        applicationId "com.hackerati.overlayserviceexample"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    repositories {
+
+        mavenCentral()
+
+        compile 'com.google.code.gson:gson:2.3'
+        compile 'com.squareup.okhttp:okhttp:2.0.0'
+        compile 'net.orfjackal.retrolambda:retrolambda:1.7.0'
+        compile 'org.roboguice:roboguice:3.0b-experimental'
+
+    }
+
+}
